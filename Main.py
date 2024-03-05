@@ -9,7 +9,7 @@ selected = option_menu(
     menu_title="Diabetes Prediction",
     options=["Home", "Dataset", "Visualization", "Input_form"],
     icons=["house-fill", "database-down", "bar-chart", "ui-radios-grid"],
-    menu_icon="heartbeat",
+    menu_icon="heart-pulse",
     default_index=0,
     orientation="horizontal"
 )
