@@ -8,7 +8,7 @@ st.set_page_config(page_title="Diabetes Prediction", page_icon="heartbeat", layo
 selected = option_menu(
     menu_title="Diabetes Prediction",
     options=["Home", "Dataset", "Visualization", "Input_form"],
-    icons=["house-fill", "database-down", "bar-chart", "ui-radios-grid"],
+    icons=["house-fill", "database-down", "pie-chart", "ui-radios-grid"],
     menu_icon="heart-pulse",
     default_index=0,
     orientation="horizontal"
