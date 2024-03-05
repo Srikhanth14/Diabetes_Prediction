@@ -22,9 +22,9 @@ def app():
 
         # Display prediction result
         if prediction[0] == 0:
-            st.error("The person is not diabetic.")
+            st.success("The person is not diabetic.")
         else:
-            st.success("The person is diabetic.")
+            st.error("The person is diabetic.")
 
     def main():
         st.title('Diabetics Prediction Web App')
