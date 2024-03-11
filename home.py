@@ -3,7 +3,7 @@ from PIL import Image
 
 def home():
 
-    image = Image.open("diabetes.png")
+    image = Image.open("diabetes_2.jpeg")
 
     # Display the image in your Streamlit app
     st.image(image, use_column_width=True)
