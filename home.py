@@ -9,7 +9,7 @@ def home():
     st.image(image, use_column_width=True)
 
     # Introduction
-    st.header("Welcome to the Diabetes Prediction App!")
+    st.header("Welcome to the Diabetes Prediction Web App!")
     st.write('''Embark on a journey to predict the likelihood of diabetes based on various
     health indicators. This web app showcases the power of machine learning in predicting
     health outcomes.''')
