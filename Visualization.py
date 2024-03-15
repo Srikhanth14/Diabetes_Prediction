@@ -32,29 +32,57 @@ def visualization(df):
 
         if plot_type == 'Count Plot':
             sns.countplot(x=df[x_axis],hue=df[hue], ax=ax)
+            plt.title(f'Distribution of {x_axis}',fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel('Count', fontsize=10)
+            plt.show()
+
         elif plot_type == 'Bar Plot':
             sns.barplot(x=df[x_axis], y=df[y_axis], errorbar=None,ax=ax)
+            plt.title(f'Bar Plot of {y_axis} vs {x_axis}', fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel(y_axis, fontsize=10)
+            plt.show()
+
         elif plot_type == 'Box Plot':
             sns.boxplot(x=df[x_axis], y=df[y_axis], ax=ax)
+            plt.title(f'Box Plot of {y_axis} vs {x_axis}', fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel(y_axis, fontsize=10)
+            plt.show()
+
         elif plot_type == 'Histogram':
             sns.histplot(df[x_axis], kde=True, ax=ax)
-            y_axis='Density'
+            plt.title(f'Histogram of {x_axis}', fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel('Density', fontsize=10)
+            plt.show()
+
         elif plot_type == 'Violin Plot':
             sns.violinplot(x=df[x_axis], y=df[y_axis], ax=ax)
+            plt.title(f'Violin Plot of {y_axis} vs {x_axis}', fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel(y_axis, fontsize=10)
+            plt.show()
+
         elif plot_type == 'Line Plot':
             sns.lineplot(x=df[x_axis], y=df[y_axis], ax=ax)
+            plt.title(f'Line Plot of {y_axis} vs {x_axis}', fontsize=12)
+            plt.xlabel(x_axis, fontsize=10)
+            plt.ylabel(y_axis, fontsize=10)
+            plt.show()
+        
         elif plot_type == 'Heatmap':
             sns.heatmap(df.corr(), annot=True, cmap='coolwarm', ax=ax)
+            plt.title('Heatmap', fontsize=12)
+            plt.xlabel('Features', fontsize=10)
+            plt.ylabel('Features', fontsize=10)
+            plt.show()
 
         # Adjust label sizes
         ax.tick_params(axis='x', labelsize=10)  # Adjust x-axis label size
         ax.tick_params(axis='y', labelsize=10)  # Adjust y-axis label size
-
-        # Adjust title and axis labels with a smaller font size
-        plt.title(f'{plot_type} of {y_axis} vs {x_axis}', fontsize=12)
-        plt.xlabel(x_axis, fontsize=10)
-        plt.ylabel(y_axis, fontsize=10)
-
+        
         # Show the results
         st.pyplot(fig)
 
