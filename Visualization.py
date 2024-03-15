@@ -38,28 +38,28 @@ def visualization(df):
             plt.show()
 
         elif plot_type == 'Bar Plot':
-            sns.barplot(x=df[x_axis], y=df[y_axis], errorbar=None,ax=ax)
+            sns.barplot(x=df[x_axis], y=df[y_axis], errorbar=None,ax=ax,palette=['#115f9a','#00ffff'])
             plt.title(f'Bar Plot of {y_axis} vs {x_axis}', fontsize=12)
             plt.xlabel(x_axis, fontsize=10)
             plt.ylabel(y_axis, fontsize=10)
             plt.show()
 
         elif plot_type == 'Box Plot':
-            sns.boxplot(x=df[x_axis], y=df[y_axis], ax=ax)
+            sns.boxplot(x=df[x_axis], y=df[y_axis], ax=ax,palette='Paired')
             plt.title(f'Box Plot of {y_axis} vs {x_axis}', fontsize=12)
             plt.xlabel(x_axis, fontsize=10)
             plt.ylabel(y_axis, fontsize=10)
             plt.show()
 
         elif plot_type == 'Histogram':
-            sns.histplot(df[x_axis], kde=True, ax=ax)
+            sns.histplot(df[x_axis], kde=True, ax=ax,palette=['#003f5c','#00ffff'])
             plt.title(f'Histogram of {x_axis}', fontsize=12)
             plt.xlabel(x_axis, fontsize=10)
             plt.ylabel('Density', fontsize=10)
             plt.show()
 
         elif plot_type == 'Violin Plot':
-            sns.violinplot(x=df[x_axis], y=df[y_axis], ax=ax)
+            sns.violinplot(x=df[x_axis], y=df[y_axis], ax=ax,palette=['#599e94','#6cd4c5'])
             plt.title(f'Violin Plot of {y_axis} vs {x_axis}', fontsize=12)
             plt.xlabel(x_axis, fontsize=10)
             plt.ylabel(y_axis, fontsize=10)
@@ -73,7 +73,7 @@ def visualization(df):
             plt.show()
         
         elif plot_type == 'Heatmap':
-            sns.heatmap(df.corr(), annot=True, cmap='coolwarm', ax=ax)
+            sns.heatmap(df.corr(), annot=True, cmap='plasma', ax=ax)
             plt.title('Heatmap', fontsize=12)
             plt.xlabel('Features', fontsize=10)
             plt.ylabel('Features', fontsize=10)
